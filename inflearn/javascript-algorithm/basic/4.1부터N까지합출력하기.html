@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+				<p>문제: 자연수 N이 입력되면 1부터 N까지의 합을 출력하는 프로그램을 작성하세요.</p>
+    </head>
+    <body>
+        <script>
+						// 내가 푼 내용 == 해설
+            function solution(n){
+							let answer = 0;
+
+							for (let i = 1; i <= n; i++) {
+								answer = i + answer;
+							}
+							
+							return answer;
+            }
+
+            console.log(solution(10));
+        </script>
+    </body>
+</html>

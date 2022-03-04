@@ -23,7 +23,10 @@
             let arr=[5, 7, 1, 3, 2, 9, 11];
             console.log(solution(arr)); */
 
+						// 해설
 						function solution(arr){      
+							/* 
+							// 첫번째 방법 (for문 사용)
 							let answer, 
 									min = Number.MAX_SAFE_INTEGER; // 안정적인 가장 큰 정수가 저장됨, min = arr[0] 으로 설정해도 됨
 
@@ -31,7 +34,10 @@
 								if (arr[i] < min) min = arr[i];
 							}
 
-							answer = min;
+							answer = min; */
+
+							// 두번째 방법 (내장함수 사용)
+							let answer = Math.min(...arr); // 그냥 배열만 넣게 되면 NaN이 출력됨
 							
 							return answer;
             }

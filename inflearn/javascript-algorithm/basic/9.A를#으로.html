@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+			<p>문제: 대문자로 이루어진 영어단어가 입력되면 단어에 포함된 ‘A'를 모두 ’#‘으로 바꾸어 출력하는 
+				프로그램을 작성하세요.
+			</p>
+        <script>
+						// 내가 푼 내용
+            /* function solution(s){
+							let answer= [],
+									splitArray = s.split("");
+
+							for (let x of splitArray) {
+								if (x === 'A') {
+									x = '#';
+								}
+								answer.push(x);
+							}
+
+							return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str)); */
+
+						// 해설1
+						/* function solution(s){
+							let answer = '';
+
+							for (let x of s) {
+								if (x === 'A') answer += '#';
+								else answer += x;
+							}
+
+							return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str)); */
+
+						// 해설2
+						function solution(s){
+							let answer = s;
+
+							answer = answer.replace(/A/g, '#'); // 'g' 전역으로 해주지 않으면 첫번째 A만 바뀌게 됨
+
+							return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+

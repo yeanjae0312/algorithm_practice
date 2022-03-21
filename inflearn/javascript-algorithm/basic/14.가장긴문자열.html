@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+			<p>문제: N개의 문자열이 입력되면 그 중 가장 긴 문자열을 출력하는 프로그램을 작성하세요.</p>
+        <script>
+						// 내가 푼 내용
+            function solution(s){
+							let answer = '',
+									max = s[0];
+
+							for (let x of s) {
+								if (x.length > max.length) max = x;
+								answer = max;
+							}
+
+							return answer;
+            }
+            let str=["teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(str));
+
+						// 해설
+						/* function solution(s){
+							let answer = '',
+									max = Number.MIN_SAFE_INTEGER;;
+
+							for (let x of s) {
+								if (x.length > max) {
+									max = x.length;
+									answer = x;
+								} 
+							}
+
+							return answer;
+            }
+            let str=["teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(str)); */
+        </script>
+    </body>
+</html>

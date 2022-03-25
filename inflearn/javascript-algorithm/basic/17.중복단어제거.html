@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+			<p>문제: N개의 문자열이 입력되면 중복된 문자열은 제거하고 출력하는 프로그램을 작성하세요.
+				출력하는 문자열은 원래의 입력순서를 유지합니다.
+			</p>
+        <script>
+						// 내가 푼 내용
+            /* function solution(s){
+							let answer = s;
+
+							for (let i=0; i<answer.length; i++) {
+								for (let j=i+1; j<answer.length; j++) {
+									if (answer[i] === answer[j]) answer.splice(j, 1);
+								}
+							}
+
+							return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str)); */
+
+						// 해설
+						function solution(s){
+							let answer;
+
+							answer = s.filter((word, index) => {
+								console.log(word, s.indexOf(word), index);
+
+								return s.indexOf(word) === index;
+							});
+
+							// answer = s.filter((word, index) => s.indexOf(word) === index); // 위 내용을 한줄로 표현한 것
+
+							return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
